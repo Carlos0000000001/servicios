@@ -14,8 +14,12 @@ class CreateBoletasTable extends Migration
     public function up()
     {
         Schema::create('boletas', function (Blueprint $table) {
-            $table->id();
+            $table->id('boleta');
+            $table->id('cliente');
+            $table->date('fechapago');
             $table->timestamps();
+            $table->foreignId("id_clientes")->constrained("clientes");
+
         });
     }
 

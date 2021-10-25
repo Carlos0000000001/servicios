@@ -15,7 +15,13 @@ class CreateDetalleserviciosTable extends Migration
     {
         Schema::create('detalleservicios', function (Blueprint $table) {
             $table->id();
+            $table->integer('numerodeordenservicio');
+            $table->String('detalleservicio');
+            $table->date('fechaatencon');
+
             $table->timestamps();
+
+            $table->foreignId("id_servicio")->constrained("servicios");
         });
     }
 
