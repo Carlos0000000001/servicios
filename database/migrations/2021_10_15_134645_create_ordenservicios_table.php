@@ -15,6 +15,9 @@ class CreateOrdenserviciosTable extends Migration
     {
         Schema::create('ordenservicios', function (Blueprint $table) {
             $table->id();
+            $table->integer('numorderservicio');
+            $table->date('fecharegistro');
+            $table->string('descripcion' , 120);
             $table->timestamps();
         });
     }
