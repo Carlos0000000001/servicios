@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\servicio;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Http\Request;
 
@@ -28,6 +29,9 @@ class ServicioController extends Controller
      */
     public function create()
     {
+        return view("servicios.crearservio");
+
+
         //
     }
 
@@ -39,6 +43,12 @@ class ServicioController extends Controller
      */
     public function store(Request $request)
     {
+
+       $servicio = new servicio() ;
+
+       ///migrar vien//
+
+
         //
     }
 

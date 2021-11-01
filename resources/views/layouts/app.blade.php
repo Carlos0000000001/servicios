@@ -38,18 +38,24 @@
                             <a href="{{route('home')}}" class="nav-link">dashboard</a>
                         </li>
 
+                        <li class="nav-item">
+                            <a href="{{route('home')}}" class="nav-link">dashboard</a>
+                        </li>
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-servicio" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 servicio
                             </a>
+
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown-servicio">
                                 <a class="dropdown-item" href="#">crear servicios</a>
-                                <a class="dropdown-item" href="#">ver servicios</a>
+                                <a class="dropdown-item" href="{{route('servicios.create')}}">ver servicios</a>
                             </div>
                         </li>
+
                     </ul>
 
+                    <!-----------------------de esta parte modifcamos codigo-->
                                 <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
