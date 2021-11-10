@@ -10,7 +10,7 @@
                     <div class="card-body">
 
 
-<table border="1" cellspacing="0">
+<table  class="table table-bordered">
     <tr>
         <th>Id</th>
         <th>Nombres</th>

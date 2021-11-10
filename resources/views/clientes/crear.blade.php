@@ -5,8 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-40">
                 <div class="card">
-                    <div  class="card-header">{{ __('lista imagenes') }}</div>
-
+                    <div  class="card-header">{{ __('registrar cliente') }}</div>
 
 <form method="post" action="/cliente">
     @csrf
@@ -17,9 +16,7 @@
     <input type="text" name="telefono" placeholder="Ingrese telefono"><br>
     <input type="text" name="dni" placeholder="Ingrese dni"><br>
 
-    <input type="submit" name="submit" Value="Guardar">
-
-
+    <input type="submit"  class="btn btn-warning btn-group-lg" name="submit" Value="Guardar">
 </form>
 
                 </div>

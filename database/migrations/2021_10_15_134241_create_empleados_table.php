@@ -18,11 +18,8 @@ class CreateEmpleadosTable extends Migration
             $table->string('nombreempleado');
             $table->string('cargo');
             $table->integer("telefono");
-
-            $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      *

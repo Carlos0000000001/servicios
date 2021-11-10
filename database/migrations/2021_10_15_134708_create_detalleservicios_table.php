@@ -21,7 +21,7 @@ class CreateDetalleserviciosTable extends Migration
 
             $table->timestamps();
 
-            $table->foreignId("id_servicio")->constrained("servicios");
+           // $table->foreignId("id_servicio")->constrained("servicios");
         });
     }
 

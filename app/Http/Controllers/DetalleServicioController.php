@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\detalleservicios;
 use Illuminate\Http\Request;
 
 class DetalleServicioController extends Controller
@@ -13,7 +14,12 @@ class DetalleServicioController extends Controller
      */
     public function index()
     {
-        //
+
+        $DetalleServicio = new detalleservicios();
+
+        $resultados = $DetalleServicio::get();
+
+        return view('detallesservicio.mostrar', ['detallesservicio'=>$resultados]);
     }
 
     /**
@@ -23,6 +29,8 @@ class DetalleServicioController extends Controller
      */
     public function create()
     {
+
+        return view('detallesservicio.crear');
         //
     }
 
@@ -35,6 +43,17 @@ class DetalleServicioController extends Controller
     public function store(Request $request)
     {
         //
+        $DetalleServicio = new detalleservicios();
+        $DetalleServicio->id =$request->id;
+        $DetalleServicio->numerodeordenservicio =$request->numerodeordenservicio;
+        $DetalleServicio->detalleservicio = $request->detalleservicio;
+        $DetalleServicio->fechaatencon = $request ->fechaatencon;
+
+        $DetalleServicio->save();
+        return redirect(Route("detallesservicio.index"));
+
+
+
     }
 
     /**

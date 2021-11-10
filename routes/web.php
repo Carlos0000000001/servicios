@@ -3,6 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ServicioController;
 use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\EmpleadosController;
+use App\Http\Controllers\DetalleServicioController;
+/* de aqui agremos la web */
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,5 +38,11 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 //Route::get('/servicios', [ServicioController::class ,'crear']);
 Route::resource('/servicios',ServicioController::class );
 Route::resource('/cliente',ClienteController::class );
+/* de aqui agremos la ruta */
+Route::resource('/empleados',EmpleadosController::class );
+Route::resource('/detallesservicio',DetalleServicioController::class);
+
+
+
 
 
